@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PRy-gk-eAv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DriveMe-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ScheduleRideViewController" customModule="DriveMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-zq-AvC">
+                                <rect key="frame" x="20" y="250" width="560" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="VUH-0w-o2B"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="492021295.74484998">
+                                    <!--2016-08-04 16:34:55 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ArG-uD-bbs"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOP-EW-bfw">
+                                <rect key="frame" x="20" y="474" width="560" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="8m8-Qe-LDG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Schedule Ride"/>
+                                <connections>
+                                    <action selector="scheduleRideButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLF-KE-vvG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule a time for pickup:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-a5-w7r">
+                                <rect key="frame" x="20" y="72" width="560" height="170"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1qY-a5-w7r" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1Wm-9D-YBe"/>
+                            <constraint firstItem="1qY-a5-w7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BOI-T0-f1j"/>
+                            <constraint firstAttribute="bottom" secondItem="TOP-EW-bfw" secondAttribute="bottom" constant="20" symbolic="YES" id="HKs-64-orD"/>
+                            <constraint firstItem="1qY-a5-w7r" firstAttribute="leading" secondItem="5kC-zq-AvC" secondAttribute="leading" id="ONC-AS-UIA"/>
+                            <constraint firstItem="1qY-a5-w7r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="72" id="bpT-IH-rvh"/>
+                            <constraint firstItem="TOP-EW-bfw" firstAttribute="top" secondItem="5kC-zq-AvC" secondAttribute="bottom" constant="8" symbolic="YES" id="dYE-7W-YES"/>
+                            <constraint firstItem="5kC-zq-AvC" firstAttribute="trailing" secondItem="TOP-EW-bfw" secondAttribute="trailing" id="dnM-WF-K9t"/>
+                            <constraint firstItem="5kC-zq-AvC" firstAttribute="top" secondItem="1qY-a5-w7r" secondAttribute="bottom" constant="8" symbolic="YES" id="jhc-SX-lb5"/>
+                            <constraint firstItem="1qY-a5-w7r" firstAttribute="trailing" secondItem="5kC-zq-AvC" secondAttribute="trailing" id="rhh-R2-KKx"/>
+                            <constraint firstItem="5kC-zq-AvC" firstAttribute="leading" secondItem="TOP-EW-bfw" secondAttribute="leading" id="u8f-Kh-88q"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="DriveMe" id="bQn-R5-ISI"/>
+                    <connections>
+                        <outlet property="datePicker" destination="5kC-zq-AvC" id="bct-hB-njh"/>
+                        <segue destination="Hts-95-k32" kind="show" identifier="toRideConfirmation" id="dvw-Qq-hAu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="349"/>
+        </scene>
+        <!--Ride Confirmation View Controller-->
+        <scene sceneID="jXX-bM-FUz">
+            <objects>
+                <viewController id="Hts-95-k32" customClass="RideConfirmationViewController" customModule="DriveMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bhZ-J8-OVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkj-6h-pwj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e91-qG-yAC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your ride is scheduled for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsQ-zf-kE0">
+                                <rect key="frame" x="20" y="72" width="560" height="127"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COi-xO-ajG">
+                                <rect key="frame" x="20" y="207" width="560" height="186"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateDisplayLabel" destination="COi-xO-ajG" id="eZa-mP-T0T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcB-dZ-xS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8PX-8M-587">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PRy-gk-eAv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pZH-Vu-BbL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bZI-aC-VPp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCy-JI-hdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="349"/>
         </scene>
     </scenes>
 </document>

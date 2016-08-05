@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		94229DE91D539EE2006126D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94229DE81D539EE2006126D7 /* AppDelegate.swift */; };
-		94229DEB1D539EE2006126D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94229DEA1D539EE2006126D7 /* ViewController.swift */; };
+		94229DEB1D539EE2006126D7 /* ScheduleRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94229DEA1D539EE2006126D7 /* ScheduleRideViewController.swift */; };
 		94229DEE1D539EE2006126D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94229DEC1D539EE2006126D7 /* Main.storyboard */; };
 		94229DF01D539EE2006126D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94229DEF1D539EE2006126D7 /* Assets.xcassets */; };
 		94229DF31D539EE2006126D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94229DF11D539EE2006126D7 /* LaunchScreen.storyboard */; };
 		94229DFE1D539EE2006126D7 /* DriveMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94229DFD1D539EE2006126D7 /* DriveMeTests.swift */; };
 		94229E091D539EE2006126D7 /* DriveMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94229E081D539EE2006126D7 /* DriveMeUITests.swift */; };
+		945BF95D1D53ABEE00A04242 /* AZNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 945BF9581D53ABEE00A04242 /* AZNotification.m */; };
+		945BF95E1D53ABEE00A04242 /* AZNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945BF95A1D53ABEE00A04242 /* AZNotificationView.m */; };
+		945BF95F1D53ABEE00A04242 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 945BF95C1D53ABEE00A04242 /* UIColor+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		94229DE51D539EE2006126D7 /* DriveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94229DE81D539EE2006126D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94229DEA1D539EE2006126D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94229DEA1D539EE2006126D7 /* ScheduleRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRideViewController.swift; sourceTree = "<group>"; };
 		94229DED1D539EE2006126D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94229DEF1D539EE2006126D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94229DF21D539EE2006126D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		94229E041D539EE2006126D7 /* DriveMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94229E081D539EE2006126D7 /* DriveMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveMeUITests.swift; sourceTree = "<group>"; };
 		94229E0A1D539EE2006126D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94229E231D53A126006126D7 /* DriveMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DriveMe-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		945BF9571D53ABEE00A04242 /* AZNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZNotification.h; sourceTree = "<group>"; };
+		945BF9581D53ABEE00A04242 /* AZNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZNotification.m; sourceTree = "<group>"; };
+		945BF9591D53ABEE00A04242 /* AZNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZNotificationView.h; sourceTree = "<group>"; };
+		945BF95A1D53ABEE00A04242 /* AZNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZNotificationView.m; sourceTree = "<group>"; };
+		945BF95B1D53ABEE00A04242 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		945BF95C1D53ABEE00A04242 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +108,18 @@
 			isa = PBXGroup;
 			children = (
 				94229DE81D539EE2006126D7 /* AppDelegate.swift */,
-				94229DEA1D539EE2006126D7 /* ViewController.swift */,
+				94229DEA1D539EE2006126D7 /* ScheduleRideViewController.swift */,
 				94229DEC1D539EE2006126D7 /* Main.storyboard */,
 				94229DEF1D539EE2006126D7 /* Assets.xcassets */,
 				94229DF11D539EE2006126D7 /* LaunchScreen.storyboard */,
 				94229DF41D539EE2006126D7 /* Info.plist */,
+				94229E231D53A126006126D7 /* DriveMe-Bridging-Header.h */,
+				945BF9571D53ABEE00A04242 /* AZNotification.h */,
+				945BF9581D53ABEE00A04242 /* AZNotification.m */,
+				945BF9591D53ABEE00A04242 /* AZNotificationView.h */,
+				945BF95A1D53ABEE00A04242 /* AZNotificationView.m */,
+				945BF95B1D53ABEE00A04242 /* UIColor+Additions.h */,
+				945BF95C1D53ABEE00A04242 /* UIColor+Additions.m */,
 			);
 			path = DriveMe;
 			sourceTree = "<group>";
@@ -256,7 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94229DEB1D539EE2006126D7 /* ViewController.swift in Sources */,
+				945BF95F1D53ABEE00A04242 /* UIColor+Additions.m in Sources */,
+				945BF95E1D53ABEE00A04242 /* AZNotificationView.m in Sources */,
+				94229DEB1D539EE2006126D7 /* ScheduleRideViewController.swift in Sources */,
+				945BF95D1D53ABEE00A04242 /* AZNotification.m in Sources */,
 				94229DE91D539EE2006126D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.DriveMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DriveMe-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -416,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryancortez.DriveMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DriveMe-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +506,7 @@
 				94229E0F1D539EE2006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94229E101D539EE2006126D7 /* Build configuration list for PBXNativeTarget "DriveMeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +515,7 @@
 				94229E121D539EE2006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94229E131D539EE2006126D7 /* Build configuration list for PBXNativeTarget "DriveMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +524,7 @@
 				94229E151D539EE2006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

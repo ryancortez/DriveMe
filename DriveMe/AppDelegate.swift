@@ -13,10 +13,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        registerNotifications()
         return true
+    }
+    
+    private func registerNotifications() {
+        
+        let yesAction = UIMutableUserNotificationAction()
+        yesAction.title = "Yes"
+        yesAction.identifier = "yesAction"
+        yesAction.authenticationRequired = true
+        yesAction.destructive = false
+        yesAction.activationMode = .Foreground
+        
+        let noAction = UIMutableUserNotificationAction()
+        noAction.title = "No"
+        noAction.identifier = "noAction"
+        noAction.authenticationRequired = true
+        noAction.destructive = false
+        noAction.activationMode = .Foreground
+        
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "rsvpCategory"
+        category.setActions([noAction,yesAction], forContext: .Default)
+        category.setActions([noAction,yesAction], forContext: .Minimal)
+        
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert], categories: [category])
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        
+        guard let action = identifier else {
+            print("Identifier was not present"); return
+        }
+        switch action {
+        case "yesAction":
+            NSNotificationCenter.defaultCenter().postNotificationName("userIsReadyForPickupNotification", object: nil)
+        case "noAction":
+            break
+        default:
+            break
+        }
+        completionHandler()
     }
 
     func applicationWillResignActive(application: UIApplication) {
